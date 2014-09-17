@@ -14,8 +14,8 @@ fresh-options --bin
   fresh clvv/fasd fasd
 fresh-options
 
-#use own terminator config
-fresh config/terminator/config --file=~/.config/terminator/config
+#use own terminator config but keep it editable https://github.com/freshshell/fresh/wiki/Frequently-Asked-Questions#writeable-files
+ln -sf ~/.dotfiles/config/terminator/config ~/.config/terminator/config
 
 # Config
 fresh-options --file
@@ -33,3 +33,4 @@ fresh drupallerina/git-achievements . --file=git-achievements/
 
 # Commandline Fu http://linuxundich.de/ubuntu/bropages-und-commandlinefu-com-liefern-beispiele-zu-terminalbefehlen-auch-aus-dem-terminal-heraus/
 fresh samirahmed/fu . --file=~/fu/
+
