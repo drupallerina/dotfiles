@@ -14,6 +14,8 @@ fresh-options --bin
   fresh clvv/fasd fasd
 fresh-options
 
+#use own terminator config
+fresh config/terminator/config --file=~/.config/terminator/config
 
 # Config
 fresh-options --file
@@ -29,5 +31,5 @@ fresh-options
 fresh drupallerina/git-achievements . --file=git-achievements/
 #fresh drupallerina/git-achievements git-achievements --bin 
 
-# Commandline Fu installed via rakefile http://linuxundich.de/ubuntu/bropages-und-commandlinefu-com-liefern-beispiele-zu-terminalbefehlen-auch-aus-dem-terminal-heraus/
+# Commandline Fu http://linuxundich.de/ubuntu/bropages-und-commandlinefu-com-liefern-beispiele-zu-terminalbefehlen-auch-aus-dem-terminal-heraus/
 fresh samirahmed/fu . --file=~/fu/
