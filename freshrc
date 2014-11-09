@@ -20,17 +20,17 @@ ln -sf ~/.dotfiles/config/terminator/config ~/.config/terminator/config
 # Config
 fresh-options --file
 
-  fresh drupallerina/prezto runcoms/zlogin  
-  fresh drupallerina/prezto runcoms/zlogout  
-  fresh drupallerina/prezto runcoms/zpreztorc  
-  fresh drupallerina/prezto runcoms/zprofile  
-  fresh drupallerina/prezto runcoms/zshenv  
+  fresh drupallerina/prezto runcoms/zlogin
+  fresh drupallerina/prezto runcoms/zlogout
+  fresh drupallerina/prezto runcoms/zpreztorc
+  fresh drupallerina/prezto runcoms/zprofile
+  fresh drupallerina/prezto runcoms/zshenv
   fresh drupallerina/prezto runcoms/zshrc
 fresh-options
 
+fresh shell/functions/\*
 fresh drupallerina/git-achievements . --file=git-achievements/
-#fresh drupallerina/git-achievements git-achievements --bin 
+#fresh drupallerina/git-achievements git-achievements --bin
 
 # Commandline Fu http://linuxundich.de/ubuntu/bropages-und-commandlinefu-com-liefern-beispiele-zu-terminalbefehlen-auch-aus-dem-terminal-heraus/
 fresh samirahmed/fu . --file=~/fu/
-
