@@ -28,7 +28,9 @@ fresh-options --file
   fresh drupallerina/prezto runcoms/zshrc
 fresh-options
 
+#Load all of my functions into .fresh/build/shell.sh
 fresh shell/functions/\*
+
 fresh drupallerina/git-achievements . --file=git-achievements/
 #fresh drupallerina/git-achievements git-achievements --bin
 
