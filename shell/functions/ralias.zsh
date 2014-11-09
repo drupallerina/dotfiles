@@ -1,4 +1,8 @@
 function ralias () {
+
   # Searches for reverse alias
-alias | grep "$1"
+alias | awk 'BEGIN { FS="="; }
+$2 ~ /^'$1'/ {print $1;}'
+
 }
+
