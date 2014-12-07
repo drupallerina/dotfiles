@@ -32,6 +32,12 @@ fresh-options --file
   fresh config/git/gitconfig
 fresh-options
 
+# adding autocompletions to shell.sh
+fresh freshshell/fresh contrib/completion/fresh-completion.zsh
+fresh twe4ked/dotfiles shell/zsh/zsh-syntax-highlighting.zsh
+fresh chrisallenlane/cheat cheat/autocompletion/cheat.zsh
+
+
 #Load all of my functions into .fresh/build/shell.sh
 fresh shell/functions/\*
 #Load other people's functions into .fresh/build/shell.sh

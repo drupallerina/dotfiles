@@ -1,0 +1,9 @@
+You may view which directories are on your CHEATPATH with cheat -d.
+
+you may edit cheatsheets with:
+
+cheat -e foo
+
+If the 'foo' cheatsheet already exists, it will be opened for editing. Otherwise, it will be created automatically.
+
+You may view which directories are on your CHEATPATH with cheat -d.
