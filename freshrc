@@ -29,6 +29,7 @@ fresh-options --file
   fresh drupallerina/prezto runcoms/zprofile
   fresh drupallerina/prezto runcoms/zshenv
   fresh drupallerina/prezto runcoms/zshrc
+  fresh config/git/gitconfig
 fresh-options
 
 #Load all of my functions into .fresh/build/shell.sh
