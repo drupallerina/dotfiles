@@ -17,6 +17,9 @@ fresh-options
 #use own terminator config but keep it editable https://github.com/freshshell/fresh/wiki/Frequently-Asked-Questions#writeable-files
 ln -sf ~/.dotfiles/config/terminator/config ~/.config/terminator/config
 
+#get prezto
+fresh drupallerina/prezto/ . --file=~/.zprezto/
+
 # Config
 fresh-options --file
 
@@ -30,9 +33,14 @@ fresh-options
 
 #Load all of my functions into .fresh/build/shell.sh
 fresh shell/functions/\*
+#Load other people's functions into .fresh/build/shell.sh
+fresh twe4ked/dotfiles shell/functions/pubkey.sh
 
+#Helpful CLI Apps
+#git achievements
 fresh drupallerina/git-achievements . --file=git-achievements/
 #fresh drupallerina/git-achievements git-achievements --bin
-
 # Commandline Fu http://linuxundich.de/ubuntu/bropages-und-commandlinefu-com-liefern-beispiele-zu-terminalbefehlen-auch-aus-dem-terminal-heraus/
 fresh samirahmed/fu . --file=~/fu/
+#cheat
+#fresh chrisallenlane/cheat . --file=src/cheat/
