@@ -4,10 +4,11 @@
 [profiles]
   [[default]]
     background_image = None
+    login_shell = True
   [[Webdev]]
     palette = "#000000:#cd0000:#00cd00:#cdcd00:#1e90ff:#cd00cd:#00cdcd:#e5e5e5:#4c4c4c:#ff0000:#00ff00:#ffff00:#4682b4:#ff00ff:#00ffff:#ffffff"
-    login_shell = True
     background_type = transparent
+    background_image = None
     scroll_on_output = False
     scrollback_infinite = True
     use_theme_colors = True
