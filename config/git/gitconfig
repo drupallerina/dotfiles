@@ -32,5 +32,6 @@ hotfix = hotfix/
 support = support/
 #versiontag =
 
-#[git-achievements]
-#achievement.upload = "true"
+
+# [git-achievements]
+# achievement.upload = "true"

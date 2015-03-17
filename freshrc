@@ -17,9 +17,19 @@ fresh-options
 #use own terminator config but keep it editable https://github.com/freshshell/fresh/wiki/Frequently-Asked-Questions#writeable-files
 ln -sf ~/.dotfiles/config/terminator/config ~/.config/terminator/config
 
-#get prezto
-fresh drupallerina/prezto/ . --file=~/.zprezto/
-
+# Prezto zsh config
+fresh sorin-ionescu/prezto . --file=~/.zprezto/
+fresh_after_build() {
+if [ -z "${updated_submodules+1}" ]; then
+cd ~/.fresh/source/sorin-ionescu/prezto/ && git pull && git submodule update --init --recursive
+export updated_submodules=0
+fi
+if [ "$updated_submodules" -eq 0 ]; then
+export updated_submodules=$[updated_submodules+1]
+~/bin/fresh
+fi
+unset updated_submodules
+}
 # Config
 fresh-options --file
 
@@ -34,7 +44,7 @@ fresh-options
 
 # adding autocompletions to shell.sh
 fresh freshshell/fresh contrib/completion/fresh-completion.zsh
-fresh twe4ked/dotfiles shell/zsh/zsh-syntax-highlighting.zsh
+#fresh twe4ked/dotfiles shell/zsh/zsh-syntax-highlighting.zsh
 fresh chrisallenlane/cheat cheat/autocompletion/cheat.zsh
 
 
@@ -45,9 +55,11 @@ fresh twe4ked/dotfiles shell/functions/pubkey.sh
 
 #Helpful CLI Apps
 #git achievements
-fresh drupallerina/git-achievements . --file=git-achievements/
+#fresh drupallerina/git-achievements . --file=git-achievements/
 #fresh drupallerina/git-achievements git-achievements --bin
 # Commandline Fu http://linuxundich.de/ubuntu/bropages-und-commandlinefu-com-liefern-beispiele-zu-terminalbefehlen-auch-aus-dem-terminal-heraus/
 fresh samirahmed/fu . --file=~/fu/
 #cheat
 #fresh chrisallenlane/cheat . --file=src/cheat/
+# emacs and rvm
+fresh senny/rvm.el rvm.el --file=~/.emacs.d/rvm/rvm.el
