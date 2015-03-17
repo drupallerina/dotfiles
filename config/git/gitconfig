@@ -17,6 +17,7 @@ default = matching
 [merge]
 log = true
 conflictstyle = diff3
+tool = meld
 
 [rerere]
 enabled = 1
