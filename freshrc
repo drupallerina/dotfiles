@@ -34,12 +34,9 @@ unset updated_submodules
 # Config
 fresh-options --file
 
-  fresh drupallerina/prezto runcoms/zlogin
-  fresh drupallerina/prezto runcoms/zlogout
-  fresh drupallerina/prezto runcoms/zpreztorc
-  fresh drupallerina/prezto runcoms/zprofile
-  fresh drupallerina/prezto runcoms/zshenv
-  fresh drupallerina/prezto runcoms/zshrc
+  #zsh runcoms
+  fresh zsh/\*
+  # git configuration
   fresh config/git/gitconfig
 fresh-options
 

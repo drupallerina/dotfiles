@@ -1,0 +1,31 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+# add fresh build to path for ralias
+#export FPATH=~/.fresh/build:$FPATH
+#add ruby gems to PATH
+export PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
+#add rvm to PATH
+export PATH="$PATH:/usr/local/rvm/bin"
+#add some more directories to PATH
+export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/usr/local/git/bin:/usr/local/mysql/bin:/opt/local/bin"
+# Source fresh shell
+
+if [[ -s "${ZDOTDIR:-$HOME}/.fresh/build/shell.sh" ]]; then
+  source ~/.fresh/build/shell.sh
+fi
+
+# aliases (move to their own file)
+#alias git="git-achievements"
+alias fu="python ~/fu/fu"
+alias git-team="git log --format='%aN' | sort -u"
