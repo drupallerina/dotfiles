@@ -61,3 +61,16 @@ fresh samirahmed/fu . --file=~/fu/
 #fresh chrisallenlane/cheat . --file=src/cheat/
 # emacs and rvm
 fresh senny/rvm.el rvm.el --file=~/.emacs.d/rvm/rvm.el
+
+# VIMRC
+fresh-options --file=~/.vimrc --marker='"'
+  fresh vim/\*
+
+fresh-options
+
+#load plugins via pathogen managed by fresh
+fresh tpope/vim-pathogen autoload/pathogen.vim --file=~/.vim/autoload/pathogen.vim
+#load basic settings as plugin
+#fresh vim/basic.vim --file=~/.vim/bundle/vim-basic/vim-basic.vim --marker='"'
+#vim style settings
+#fresh vim/style.vim --file=~/.vim/bundle/style/style.vim --marker='"'
