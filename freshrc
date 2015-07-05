@@ -71,5 +71,5 @@ fresh-options
 #load plugins via pathogen managed by fresh
 fresh tpope/vim-pathogen autoload/pathogen.vim --file=~/.vim/autoload/pathogen.vim
 #get drupal vimrc as plugin
-fresh http://git.drupal.org/project/vimrc.git . --file=~/.drush/vimrc/ --ref=7.x-1.x
+#fresh http://git.drupal.org/project/vimrc.git . --file=~/.drush/vimrc/ --ref=7.x-1.x
 ln -sf ~/.drush/vimrc/bundle/vim-plugin-for-drupal ~/.vim/bundle/vim-plugin-for-drupal
