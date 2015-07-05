@@ -33,7 +33,7 @@ unset updated_submodules
 }
 # Config
 fresh-options --file
-
+  fresh profile
   #zsh runcoms
   fresh zsh/\*
   # git configuration
@@ -41,7 +41,7 @@ fresh-options --file
 fresh-options
 
 # adding autocompletions to shell.sh
-fresh freshshell/fresh contrib/completion/fresh-completion.zsh
+fresh freshshell/fresh contrib/completion/fresh-completion.zsh --file=completion/_fresh
 #fresh twe4ked/dotfiles shell/zsh/zsh-syntax-highlighting.zsh
 fresh chrisallenlane/cheat cheat/autocompletion/cheat.zsh
 
@@ -70,7 +70,6 @@ fresh-options
 
 #load plugins via pathogen managed by fresh
 fresh tpope/vim-pathogen autoload/pathogen.vim --file=~/.vim/autoload/pathogen.vim
-#load basic settings as plugin
-#fresh vim/basic.vim --file=~/.vim/bundle/vim-basic/vim-basic.vim --marker='"'
-#vim style settings
-#fresh vim/style.vim --file=~/.vim/bundle/style/style.vim --marker='"'
+#get drupal vimrc as plugin
+fresh http://git.drupal.org/project/vimrc.git . --file=~/.drush/vimrc/ --ref=7.x-1.x
+ln -sf ~/.drush/vimrc/bundle/vim-plugin-for-drupal ~/.vim/bundle/vim-plugin-for-drupal

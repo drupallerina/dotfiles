@@ -36,6 +36,9 @@ fi
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
 
+#Source the default etc/profile in sh emulation mode
+[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+
 # Set the the list of directories that cd searches.
 # cdpath=(
 #   $cdpath
@@ -46,6 +49,9 @@ path=(
   /usr/local/{bin,sbin}
   $path
 )
+#Set fpath
+fpath=(
+  ~/.fresh/build/completion $fpath)
 
 #
 # Less
