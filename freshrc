@@ -13,6 +13,7 @@ fresh-options --bin
   fresh freshshell/fresh bin/fresh
   fresh clvv/fasd fasd
   fresh klausi/pareviewsh pareview.sh
+  fresh alicraigmile/show-wip show-wip
 fresh-options
 
 #use own terminator config but keep it editable https://github.com/freshshell/fresh/wiki/Frequently-Asked-Questions#writeable-files

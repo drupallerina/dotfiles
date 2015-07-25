@@ -22,3 +22,4 @@ ${ZDOTDIR:-$HOME}/.composer/vendor/bin
 export DEFAULT_CHEAT_DIR=~/.cheat
 export CHEATPATH=~/.dotfiles/manual/cheat
 export CHEATCOLORS=true
+export GOPATH=/usr/local/go/bin
