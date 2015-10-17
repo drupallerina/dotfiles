@@ -1,23 +1,23 @@
 [global_config]
 [keybindings]
   new_tab = <Primary>t
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
 [profiles]
   [[default]]
     background_image = None
     login_shell = True
   [[Webdev]]
-    palette = "#000000:#cd0000:#00cd00:#cdcd00:#1e90ff:#cd00cd:#00cdcd:#e5e5e5:#4c4c4c:#ff0000:#00ff00:#ffff00:#4682b4:#ff00ff:#00ffff:#ffffff"
-    background_type = transparent
     background_image = None
+    background_type = transparent
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#1e90ff:#cd00cd:#00cdcd:#e5e5e5:#4c4c4c:#ff0000:#00ff00:#ffff00:#4682b4:#ff00ff:#00ffff:#ffffff"
     scroll_on_output = False
     scrollback_infinite = True
     use_theme_colors = True
-[layouts]
-  [[default]]
-    [[[child1]]]
-      type = Terminal
-      parent = window0
-    [[[window0]]]
-      type = Window
-      parent = ""
-[plugins]

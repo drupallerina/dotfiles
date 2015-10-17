@@ -25,6 +25,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.fresh/build/shell.sh" ]]; then
   source ~/.fresh/build/shell.sh
 fi
 
+#search and replace
+autoload -U zmv
+
 # aliases (move to their own file)
 #alias git="git-achievements"
 alias fu="python ~/fu/fu"
