@@ -20,7 +20,7 @@ fresh-options
 ln -sf ~/.dotfiles/config/terminator/config ~/.config/terminator/config
 
 # Prezto zsh config
-fresh sorin-ionescu/prezto . --file=~/.zprezto/
+fresh rosenstrauch/prezto . --file=~/.zprezto/ --ref=production
 
 fresh_after_build() {
 chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcs

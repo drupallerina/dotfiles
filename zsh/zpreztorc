@@ -26,6 +26,9 @@ zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
+  'alias-tips' \
+  'explainshell' \
+  'please' \
   'editor' \
   'history' \
   'directory' \
@@ -33,6 +36,7 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'archive' \
+  'bd' \
   'command-not-found' \
   'fasd' \
   'git' \
@@ -43,6 +47,13 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'history-substring-search' \
   'prompt'
+
+#
+# Explainshell
+#
+
+`zstyle ':prezto:module:explainshell' key-binding '^5'`
+
 
 #
 # Editor
