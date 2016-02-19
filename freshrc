@@ -18,9 +18,11 @@ fresh-options
 
 #use own terminator config but keep it editable https://github.com/freshshell/fresh/wiki/Frequently-Asked-Questions#writeable-files
 ln -sf ~/.dotfiles/config/terminator/config ~/.config/terminator/config
+fresh-options --ref=production
 
 # Prezto zsh config
-fresh rosenstrauch/prezto --ref=production --file=~/.zprezto/
+fresh rosenstrauch/prezto . --file=~/.zprezto/
+fresh-options
 
 fresh_after_build() {
 chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcs
