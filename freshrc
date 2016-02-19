@@ -21,7 +21,7 @@ ln -sf ~/.dotfiles/config/terminator/config ~/.config/terminator/config
 
 
 # Prezto zsh config
-fresh rosenstrauch/prezto . --file=~/.zprezto/ --ref=ed04176
+fresh rosenstrauch/prezto . --file=~/.zprezto/ --ref=e00e17e
 
 fresh_after_build() {
 chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcs
