@@ -22,7 +22,28 @@ ln -sf ~/.dotfiles/config/terminator/config ~/.config/terminator/config
 
 
 # Prezto zsh config
-fresh rosenstrauch/prezto . --file=~/.zprezto/ --ref=f167c47
+fresh rosenstrauch/prezto . --file=~/.zprezto/ --ref=66f3bb1
+
+## Prezto Submodules
+## :instead of relying on git submodules load external components using fresh
+fresh zsh-users/zsh-history-substring-search . --file=zprezto/modules/history-substring-search/external/
+
+fresh zsh-users/zsh-syntax-highlighting . --file=zprezto/modules/syntax-highlighting/external/
+
+fresh djui/alias-tips . --file=zprezto/modules/alias-tips/external/
+
+fresh Tarrasch/zsh-bd . --file=zprezto/modules/bd/external/
+
+fresh el1t/statusline . --file=zprezto/modules/prompt/external/statusline/
+
+fresh sindresorhus/pure . --file=zprezto/modules/prompt/external/pure/
+
+fresh agnoster/agnoster-zsh-theme . --file=zprezto/modules/prompt/external/pure/
+
+fresh sindresorhus/pure . --file=zprezto/modules/prompt/external/powerline/
+
+fresh davidjrice/prezto_powerline . --file=zprezto/modules/prompt/external/powerline/
+
 
 # !!IMPORTANT!!
 # prezto submodules update only after "fresh" not after fresh install or update
@@ -30,11 +51,12 @@ fresh rosenstrauch/prezto . --file=~/.zprezto/ --ref=f167c47
 fresh_after_build() {
 chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcs
 chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcbf
+chmod +x $HOME/.fresh/build/zprezto/modules/alias-tips/external/alias-tips
 
 phpcs --config-set installed_paths ~/.fresh/build/src/PHP_CodeSniffer/CodeSniffer/Standards
 
 if [ -z "${updated_submodules+1}" ]; then
-cd ~/.fresh/source/rosenstrauch/prezto/ && git pull && git submodule update --init --recursive
+cd ~/.fresh/source/rosenstrauch/prezto/ && git checkout production && git pull && git submodule update --init --recursive
 export updated_submodules=0
 fi
 if [ "$updated_submodules" -eq 0 ]; then
