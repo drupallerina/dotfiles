@@ -1,5 +1,6 @@
 # freshshell.com
 #
+#
 # Examples:
 #
 #   fresh twe4ked/dotfiles shell/functions/\*
@@ -21,8 +22,11 @@ ln -sf ~/.dotfiles/config/terminator/config ~/.config/terminator/config
 
 
 # Prezto zsh config
-fresh rosenstrauch/prezto . --file=~/.zprezto/ --ref=da92aba
+fresh rosenstrauch/prezto . --file=~/.zprezto/ --ref=f167c47
 
+# !!IMPORTANT!!
+# prezto submodules update only after "fresh" not after fresh install or update
+# !!IMPORTANT!!
 fresh_after_build() {
 chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcs
 chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcbf
