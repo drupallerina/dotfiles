@@ -69,7 +69,8 @@ chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcs
 chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcbf
 #chmod +x $HOME/.fresh/build/zprezto/modules/alias-tips/external/alias-tips
 
-phpcs --config-set installed_paths ~/.fresh/build/src/PHP_CodeSniffer/CodeSniffer/Standards
+#register new coding standards with phpcs (set path where phpcs can find the standards)
+#phpcs --config-set installed_paths ~/.fresh/build/src/PHP_CodeSniffer/CodeSniffer/Standards
 
 cd ~/.fresh/source/rosenstrauch/prezto/ && git checkout production && git pull
 }
