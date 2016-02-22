@@ -22,7 +22,7 @@ ln -sf ~/.dotfiles/config/terminator/config ~/.config/terminator/config
 
 
 # Prezto zsh config
-fresh rosenstrauch/prezto . --file=~/.zprezto/ --ref=66f3bb1
+fresh rosenstrauch/prezto . --file=~/.zprezto/ --ref=01b3d24
 
 ## Prezto Submodules
 ## :instead of relying on git submodules load external components using fresh
@@ -55,17 +55,8 @@ chmod +x $HOME/.fresh/build/zprezto/modules/alias-tips/external/alias-tips
 
 phpcs --config-set installed_paths ~/.fresh/build/src/PHP_CodeSniffer/CodeSniffer/Standards
 
-if [ -z "${updated_submodules+1}" ]; then
-cd ~/.fresh/source/rosenstrauch/prezto/ && git checkout production && git pull && git submodule update --init --recursive
-export updated_submodules=0
-fi
-if [ "$updated_submodules" -eq 0 ]; then
-export updated_submodules=$[updated_submodules+1]
-~/bin/fresh
-fi
-unset updated_submodules
+cd ~/.fresh/source/rosenstrauch/prezto/ && git checkout production && git pull
 }
-
 # Config
 fresh-options --file
   fresh profile
