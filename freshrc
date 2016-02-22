@@ -21,29 +21,45 @@ fresh-options
 ln -sf ~/.dotfiles/config/terminator/config ~/.config/terminator/config
 
 
-# Prezto zsh config
-fresh rosenstrauch/prezto . --file=~/.zprezto/ --ref=01b3d24
+## Prezto zsh config
+## :get our own prezto setup
+
+fresh rosenstrauch/prezto . --file=.zprezto/ --ref=01b3d24626b4432f4
 
 ## Prezto Submodules
 ## :instead of relying on git submodules load external components using fresh
-fresh zsh-users/zsh-history-substring-search . --file=zprezto/modules/history-substring-search/external/
 
-fresh zsh-users/zsh-syntax-highlighting . --file=zprezto/modules/syntax-highlighting/external/
+### Commandline Fu
+### :find cli commands
+###  <http://linuxundich.de/ubuntu/bropages-und-commandlinefu-com-liefern-beispiele-zu-terminalbefehlen-auch-aus-dem-terminal-heraus/>
+fresh samirahmed/fu . --file=.zprezto/modules/fu/external/
 
-fresh djui/alias-tips . --file=zprezto/modules/alias-tips/external/
+fresh zsh-users/zsh-history-substring-search . --file=.zprezto/modules/history-substring-search/external/
 
-fresh Tarrasch/zsh-bd . --file=zprezto/modules/bd/external/
+fresh zsh-users/zsh-syntax-highlighting . --file=.zprezto/modules/syntax-highlighting/external/
 
-fresh el1t/statusline . --file=zprezto/modules/prompt/external/statusline/
+fresh djui/alias-tips . --file=.zprezto/modules/alias-tips/external/
 
-fresh sindresorhus/pure . --file=zprezto/modules/prompt/external/pure/
+fresh Tarrasch/zsh-bd . --file=.zprezto/modules/bd/external/
 
-fresh agnoster/agnoster-zsh-theme . --file=zprezto/modules/prompt/external/pure/
+## Prezto themes
+fresh sindresorhus/pure  async.zsh --file=.zprezto/modules/prompt/functions/async
 
-fresh sindresorhus/pure . --file=zprezto/modules/prompt/external/powerline/
+#fresh el1t/statusline . --file=.zprezto/modules/prompt/external/statusline/
+fresh el1t/statusline prezto/prompt_statusline_setup --file=.zprezto/modules/prompt/functions/prompt_statusline_setup
 
-fresh davidjrice/prezto_powerline . --file=zprezto/modules/prompt/external/powerline/
+#fresh sindresorhus/pure . --file=.zprezto/modules/prompt/external/pure/
+fresh sindresorhus/pure pure.zsh --file=.zprezto/modules/prompt/functions/prompt_pure_setup
 
+#fresh davidjrice/prezto_powerline . --file=.zprezto/modules/prompt/external/powerline/
+fresh davidjrice/prezto_powerline prompt_powerline_setup --file=.zprezto/modules/prompt/functions/prompt_powerline_setup
+
+
+#fresh chauncey-garrett/zsh-prompt-garrett . --file=.zprezto/modules/prompt/external/garrett/
+fresh chauncey-garrett/zsh-prompt-garrett prompt_garrett_setup --file=.zprezto/modules/prompt/functions/prompt_garrett_setup
+
+# now get the completed prezto setup
+ln -sf ~/.fresh/build/.zprezto/ ~/.zprezto
 
 # !!IMPORTANT!!
 # prezto submodules update only after "fresh" not after fresh install or update
