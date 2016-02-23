@@ -39,6 +39,7 @@ zstyle ':prezto:load' pmodule \
   'bd' \
   'command-not-found' \
   'fasd' \
+  'fu' \
   'git' \
   'node' \
   'rsync' \
@@ -48,7 +49,7 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'prompt'
 
-# set alias tips in prezto to automatically expand 
+# set alias tips in prezto to automatically expand
 zstyle ':prezto:module:alias-tips' expand 'yes'
 
 #
