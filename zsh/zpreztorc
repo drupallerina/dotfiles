@@ -48,6 +48,9 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'prompt'
 
+# set alias tips in prezto to automatically expand 
+zstyle ':prezto:module:alias-tips' expand 'yes'
+
 #
 # Explainshell
 #
