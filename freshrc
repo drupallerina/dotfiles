@@ -61,9 +61,6 @@ fresh chauncey-garrett/zsh-prompt-garrett prompt_garrett_setup --file=.zprezto/m
 # now get the completed prezto setup
 ln -sf ~/.fresh/build/.zprezto/ ~/.zprezto
 
-# !!IMPORTANT!!
-# prezto submodules update only after "fresh" not after fresh install or update
-# !!IMPORTANT!!
 fresh_after_build() {
 chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcs
 chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcbf
@@ -71,9 +68,9 @@ chmod +x $HOME/.fresh/build/.zprezto/modules/alias-tips/external/alias-tips
 chmod +x $HOME/.fresh/build/.zprezto/modules/fu/external/fu
 
 #register new coding standards with phpcs (set path where phpcs can find the standards)
-#phpcs --config-set installed_paths ~/.fresh/build/src/PHP_CodeSniffer/CodeSniffer/Standards
+phpcs --config-set installed_paths ~/.fresh/build/src/PHP_CodeSniffer/CodeSniffer/Standards
 
-cd ~/.fresh/source/rosenstrauch/prezto/ && git checkout production && git pull
+#cd ~/.fresh/source/rosenstrauch/prezto/ && git checkout production && git pull
 }
 # Config
 fresh-options --file
@@ -101,8 +98,7 @@ fresh twe4ked/dotfiles shell/functions/pubkey.sh
 #git achievements
 #fresh drupallerina/git-achievements . --file=git-achievements/
 #fresh drupallerina/git-achievements git-achievements --bin
-# Commandline Fu http://linuxundich.de/ubuntu/bropages-und-commandlinefu-com-liefern-beispiele-zu-terminalbefehlen-auch-aus-dem-terminal-heraus/
-fresh samirahmed/fu . --file=~/fu/
+
 #cheat
 #fresh chrisallenlane/cheat . --file=src/cheat/
 # emacs and rvm
