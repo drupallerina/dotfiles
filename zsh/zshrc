@@ -27,8 +27,3 @@ fi
 
 #search and replace
 autoload -U zmv
-
-# aliases (move to their own file)
-#alias git="git-achievements"
-alias fu="python ~/fu/fu"
-alias git-team="git log --format='%aN' | sort -u"
