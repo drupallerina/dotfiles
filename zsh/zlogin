@@ -23,6 +23,3 @@ if (( $+commands[fortune] )); then
 fi
 
 [[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-#Composer
-PATH=$PATH:$HOME/.composer/vendor/bin

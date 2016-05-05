@@ -17,6 +17,8 @@ fi
 export PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
 #add rvm to PATH
 export PATH="$PATH:/usr/local/rvm/bin"
+#add composer to path
+export PATH="$HOME/.composer/vendor/bin:$PATH"
 #add some more directories to PATH
 export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/usr/local/git/bin:/usr/local/mysql/bin:/opt/local/bin"
 # Source fresh shell
