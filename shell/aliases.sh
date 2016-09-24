@@ -6,3 +6,5 @@ alias git-team="git log --format='%aN' | sort -u"
 alias drush7='~/drush7/vendor/bin/drush'
 alias drush8='~/drush8/vendor/bin/drush'
 alias drush='drush8'
+# other
+alias a='atom'
