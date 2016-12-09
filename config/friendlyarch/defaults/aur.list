@@ -1,0 +1,23 @@
+# generate with
+# pacman -Qm
+# install with
+# yaourt -S
+android-studio
+atom-editor-bin
+#chef-dk
+macchanger-gtk
+pandoc-bin
+#thunderbird-lightning-bin
+feedthemonkey
+fasd-git
+gitflow-avh
+#brother-hl2130
+mikidown
+betty
+gpodder3
+gnome-shell-extension-installer
+gisto
+#seafile-client
+#seafile-client-cli
+#codemiscs-git
+sortphotos

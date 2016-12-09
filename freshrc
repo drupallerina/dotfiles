@@ -20,6 +20,8 @@ fresh-options
 #use own terminator config but keep it editable https://github.com/freshshell/fresh/wiki/Frequently-Asked-Questions#writeable-files
 ln -sf ~/.dotfiles/config/terminator/config ~/.config/terminator/config
 
+# my friendlyarch config
+fresh config/friendlyarch --file=~/.friendlyarch/
 
 ## Prezto zsh config
 ## :get our own prezto setup
@@ -38,8 +40,7 @@ fresh zsh-users/zsh-history-substring-search . --file=.zprezto/modules/history-s
 
 fresh zsh-users/zsh-syntax-highlighting . --file=.zprezto/modules/syntax-highlighting/external/
 
-fresh djui/alias-tips . --file=.zprezto/modules/alias-tips/external/
-
+fresh rosenstrauch/alias-tips . --file=.zprezto/modules/alias-tips/external/
 fresh Tarrasch/zsh-bd . --file=.zprezto/modules/bd/external/
 
 ## Prezto themes
@@ -64,7 +65,7 @@ ln -sf ~/.fresh/build/.zprezto/ ~/.zprezto
 fresh_after_build() {
 chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcs
 chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcbf
-chmod +x $HOME/.fresh/build/.zprezto/modules/alias-tips/external/alias-tips
+chmod +x $HOME/.fresh/build/.zprezto/modules/alias-tips/external/alias-tips.py
 chmod +x $HOME/.fresh/build/.zprezto/modules/fu/external/fu
 
 #register new coding standards with phpcs (set path where phpcs can find the standards)

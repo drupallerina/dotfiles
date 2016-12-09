@@ -1,0 +1,26 @@
+# generate with https://pip.pypa.io/en/latest/reference/pip_list.html
+# pip list|grep '^[^ ]\+' -o
+# pygments for cheat
+Pygments
+
+# XXX https://github.com/ralphbean/bugwarrior setup via pip2
+#bugwarrior
+
+# setup powerline
+#git+git://github.com/Lokaltog/powerline.git
+#git+git://github.com/kovidgoyal/powerline-daemon.git
+# setup cheat
+cheat
+# TODO: bitbucket-issues-cli needs https://bitbucket.org/jsmits/bitbucket-issues-cli/pull-request/2/patched-to-include-git-repositories-fixes/diff -e hg+https://bitbucket.org/jsmits/bitbucket-issues-cli#egg=bbi
+#sudo pip install gcalcli
+
+# taskwarrior addons
+#tasksync
+#taskwarrior-time-tracking-hook
+setuptools
+#thefuck currently installed via pacman
+#thefuck
+# XXX https://github.com/mooz/percol
+percol
+#sortphotos moved to pacman?
+#https://github.com/andrewning/sortphotos/archive/master.zip
