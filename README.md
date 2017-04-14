@@ -9,12 +9,12 @@ sudo dpkg-reconfigure keyboard-configuration
 Save keyboard configuration to console:
 sudo dpkg-reconfigure console-setup
 
-#Dependencies
+## Dependencies
 zsh https://wiki.archlinux.org/index.php/zsh
-#Installation
+## Installation
 
 ```
-wget https://github.com/drupallerina/dotfiles/edit/master/setup.zsh
+wget https://raw.githubusercontent.com/drupallerina/dotfiles/master/setup.zsh
 chmod +x setup.zsh
 ./setup.zsh
 ```
