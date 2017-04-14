@@ -26,7 +26,7 @@ fresh config/friendlyarch --file=~/.friendlyarch/
 ## Prezto zsh config
 ## :get our own prezto setup
 
-fresh rosenstrauch/prezto . --file=.zprezto/ --ref=bed21a831348
+fresh rosenstrauch/prezto . --file=.zprezto/ --ref=production
 
 ## Prezto Submodules
 ## :instead of relying on git submodules load external components using fresh
