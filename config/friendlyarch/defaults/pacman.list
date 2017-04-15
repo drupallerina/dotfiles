@@ -16,8 +16,8 @@ php-composer
 #seahorse
 #devhelp
 #emacs
+chrome-gnome-shell
 docker
-docker-compose
 firefox
 gedit
 gedit-code-assistance
