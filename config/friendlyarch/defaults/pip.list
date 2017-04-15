@@ -17,10 +17,13 @@ cheat
 # taskwarrior addons
 #tasksync
 #taskwarrior-time-tracking-hook
-setuptools
+#setuptools
 #thefuck currently installed via pacman
 #thefuck
 # XXX https://github.com/mooz/percol
 percol
 #sortphotos moved to pacman?
 #https://github.com/andrewning/sortphotos/archive/master.zip
+
+#get docker-compose
+docker-compose

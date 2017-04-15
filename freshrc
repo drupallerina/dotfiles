@@ -15,7 +15,7 @@ fresh-options --bin
   fresh clvv/fasd fasd
   fresh klausi/pareviewsh pareview.sh --ref=7.x-1.x
   fresh alicraigmile/show-wip show-wip
-  fresh docksal/docksal bin/fin --ref=develop
+  fresh docksal/docksal bin/fin
 fresh-options
 
 #use own terminator config but keep it editable https://github.com/freshshell/fresh/wiki/Frequently-Asked-Questions#writeable-files
@@ -27,7 +27,7 @@ fresh config/friendlyarch --file=~/.friendlyarch/
 ## Prezto zsh config
 ## :get our own prezto setup
 
-fresh rosenstrauch/prezto . --file=.zprezto/ --ref=bed21a831348
+fresh rosenstrauch/prezto . --file=.zprezto/ --ref=production
 
 ## Prezto Submodules
 ## :instead of relying on git submodules load external components using fresh
@@ -63,17 +63,7 @@ fresh chauncey-garrett/zsh-prompt-garrett prompt_garrett_setup --file=.zprezto/m
 # now get the completed prezto setup
 ln -sf ~/.fresh/build/.zprezto/ ~/.zprezto
 
-fresh_after_build() {
-chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcs
-chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcbf
-chmod +x $HOME/.fresh/build/.zprezto/modules/alias-tips/external/alias-tips.py
-chmod +x $HOME/.fresh/build/.zprezto/modules/fu/external/fu
 
-#register new coding standards with phpcs (set path where phpcs can find the standards)
-phpcs --config-set installed_paths ~/.fresh/build/src/PHP_CodeSniffer/CodeSniffer/Standards
-
-#cd ~/.fresh/source/rosenstrauch/prezto/ && git checkout production && git pull
-}
 # Config
 fresh-options --file
   fresh profile
@@ -118,6 +108,18 @@ fresh http://git.drupal.org/project/coder.git coder_sniffer/DrupalPractice --ref
 
 ln -sf ~/.fresh/source/squizlabs/PHP_CodeSniffer/scripts/phpcs ~/bin/phpcs
 ln -sf ~/.fresh/source/squizlabs/PHP_CodeSniffer/scripts/phpcbf ~/bin/phpcbf
+
+fresh_after_build() {
+chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcs
+chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcbf
+chmod +x $HOME/.fresh/build/.zprezto/modules/alias-tips/external/alias-tips.py
+chmod +x $HOME/.fresh/build/.zprezto/modules/fu/external/fu
+
+#register new coding standards with phpcs (set path where phpcs can find the standards)
+~/bin/phpcs --config-set installed_paths ~/.fresh/build/src/PHP_CodeSniffer/CodeSniffer/Standards
+
+#cd ~/.fresh/source/rosenstrauch/prezto/ && git checkout production && git pull
+}
 
 
 # VIMRC
