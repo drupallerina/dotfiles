@@ -2,7 +2,7 @@
 # pacman -Qm
 # install with
 # yaourt -S
-android-studio
+#android-studio
 atom-editor-bin
 #chef-dk
 macchanger-gtk
@@ -12,11 +12,11 @@ feedthemonkey
 fasd-git
 gitflow-avh
 #brother-hl2130
-mikidown
+#mikidown
 betty
 gpodder3
-gnome-shell-extension-installer
-gisto
+#gnome-shell-extension-installer
+#gisto
 #seafile-client
 #seafile-client-cli
 #codemiscs-git
