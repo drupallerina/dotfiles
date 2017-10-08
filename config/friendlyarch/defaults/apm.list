@@ -3,41 +3,13 @@
 # apm list --installed --bare | grep '^[^@]\+' -o > my_atom_packages.txt
 # install with
 # apm install --packages-file my_atom_packages.txt
-# TODO: find a package for terminal and git
+
 atom-beautify
-#atom-html-preview
-#atom-jshint
-#atom-ungit
-#atom-xikij
-#color-picker
-#find-selection
-#git-history
-#git-log
-#git-blame
-#git-plus
-#atom-memolist-new
-#https://atom.io/packages/atom-yeoman
-#gulp-helper
-#git-projects
-#XXX https://atom.io/packages/glist
-#glist
-#gitignore-snippets
-#language-todotxt
-#linter
+linter
+linter-twig
 markdown-writer
-#mendeleydesktop
 merge-conflicts
-#notebook
-#open-plus
-#pigments
-#project-ring
-#project-finder
-#project-colorize
-#project-view
-#punchclock
+php-twig
 refactor
 stacktrace
-#tree-view-git-projects
-#terminal-status
 todo-show
-#zotero
