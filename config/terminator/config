@@ -12,6 +12,8 @@
 [plugins]
 [profiles]
   [[default]]
+    cursor_color = "#aaaaaa"
+    background_image = None
     login_shell = True
     scrollback_infinite = True
   [[Webdev]]
