@@ -15,7 +15,7 @@ fresh-options --bin
   fresh clvv/fasd fasd
   fresh klausi/pareviewsh pareview.sh --ref=7.x-1.x
   fresh alicraigmile/show-wip show-wip
-  fresh docksal/docksal bin/fin --ref=master
+  fresh docksal/docksal bin/fin --ref=0526978
 fresh-options
 
 #use own terminator config but keep it editable https://github.com/freshshell/fresh/wiki/Frequently-Asked-Questions#writeable-files
@@ -27,7 +27,7 @@ fresh config/friendlyarch --file=~/.friendlyarch/
 ## Prezto zsh config
 ## :get our own prezto setup
 
-fresh rosenstrauch/prezto . --file=.zprezto/ --ref=production
+fresh rosenstrauch/prezto . --file=.zprezto/ --ref=6c818153c8ef7
 
 ## Prezto Submodules
 ## :instead of relying on git submodules load external components using fresh

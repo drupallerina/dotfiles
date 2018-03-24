@@ -2,7 +2,7 @@
 
   # packagemanagers
   # known values are: enabled_packagemanagers=("pacman" "npm" "rvm" "fresh" "apm" "aur" "pip" "go" "composer" "gnome_ext")
-  enabled_packagemanagers=("pacman" "composer" "npm" "apm" "aur" "pip")
+  enabled_packagemanagers=("npm")
   # Paths
   logfile_path=./logs
 
