@@ -15,7 +15,7 @@ fresh-options --bin
   fresh clvv/fasd fasd
   fresh klausi/pareviewsh pareview.sh --ref=7.x-1.x
   fresh alicraigmile/show-wip show-wip
-  fresh docksal/docksal bin/fin --ref=0526978
+  fresh docksal/docksal bin/fin --ref=v1.8.0
 fresh-options
 
 #use own terminator config but keep it editable https://github.com/freshshell/fresh/wiki/Frequently-Asked-Questions#writeable-files
