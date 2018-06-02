@@ -8,6 +8,15 @@
 #   fresh jasoncodes/dotfiles config/tmux.conf --file
 #
 # See http://freshshell.com/readme for documentation.
+#
+# Helpful funtion(s)
+
+backup_files_existing_before_fresh() {
+if [[ ! -L "$1" && (-d "$1" || -f "$1") ]]; then
+  echo "=> $1 exists and is not a symlink, removing and symlinking from fresh"
+  mv $1 $1.bak
+fi
+}
 
 # bin commands
 fresh-options --bin
@@ -16,9 +25,13 @@ fresh-options --bin
   fresh klausi/pareviewsh pareview.sh --ref=7.x-1.x
   fresh alicraigmile/show-wip show-wip
   fresh docksal/docksal bin/fin --ref=v1.8.0
+  fresh simonwhitaker/gibo gibo
 fresh-options
 
-#use own terminator config but keep it editable https://github.com/freshshell/fresh/wiki/Frequently-Asked-Questions#writeable-files
+# Bootstrap fresh
+ln -sf ~/.dotfiles/freshrc ~/.freshrc
+
+# use own terminator config but keep it editable https://github.com/freshshell/fresh/wiki/Frequently-Asked-Questions#writeable-files
 ln -sf ~/.dotfiles/config/terminator/config ~/.config/terminator/config
 
 # my friendlyarch config
@@ -26,7 +39,6 @@ fresh config/friendlyarch --file=~/.friendlyarch/
 
 ## Prezto zsh config
 ## :get our own prezto setup
-
 fresh rosenstrauch/prezto . --file=.zprezto/ --ref=6c818153c8ef7
 
 ## Prezto Submodules
@@ -47,17 +59,12 @@ fresh Tarrasch/zsh-bd . --file=.zprezto/modules/bd/external/
 ## Prezto themes
 fresh sindresorhus/pure  async.zsh --file=.zprezto/modules/prompt/functions/async
 
-#fresh el1t/statusline . --file=.zprezto/modules/prompt/external/statusline/
 fresh el1t/statusline prezto/prompt_statusline_setup --file=.zprezto/modules/prompt/functions/prompt_statusline_setup
 
-#fresh sindresorhus/pure . --file=.zprezto/modules/prompt/external/pure/
 fresh sindresorhus/pure pure.zsh --file=.zprezto/modules/prompt/functions/prompt_pure_setup
 
-#fresh davidjrice/prezto_powerline . --file=.zprezto/modules/prompt/external/powerline/
 fresh davidjrice/prezto_powerline prompt_powerline_setup --file=.zprezto/modules/prompt/functions/prompt_powerline_setup
 
-
-#fresh chauncey-garrett/zsh-prompt-garrett . --file=.zprezto/modules/prompt/external/garrett/
 fresh chauncey-garrett/zsh-prompt-garrett prompt_garrett_setup --file=.zprezto/modules/prompt/functions/prompt_garrett_setup
 
 # now get the completed prezto setup
@@ -75,8 +82,6 @@ fresh-options
 
 # adding autocompletions to shell.sh
 fresh freshshell/fresh contrib/completion/fresh-completion.zsh --file=completion/_fresh
-#fresh twe4ked/dotfiles shell/zsh/zsh-syntax-highlighting.zsh
-#fresh chrisallenlane/cheat cheat/autocompletion/cheat.zsh
 
 #Load my aliases
 fresh shell/aliases.sh
@@ -85,15 +90,6 @@ fresh shell/aliases.sh
 fresh shell/functions/\*
 #Load other people's functions into .fresh/build/shell.sh
 fresh twe4ked/dotfiles shell/functions/pubkey.sh
-
-#Helpful CLI Apps
-#git achievements
-#fresh drupallerina/git-achievements . --file=git-achievements/
-#fresh drupallerina/git-achievements git-achievements --bin
-
-#cheat
-#fresh chrisallenlane/cheat . --file=src/cheat/
-
 
 # pareview
 fresh squizlabs/PHP_CodeSniffer . --file=src/PHP_CodeSniffer/ --ref=dcbed1074
@@ -104,6 +100,11 @@ fresh http://git.drupal.org/project/coder.git coder_sniffer/DrupalPractice --ref
 #ln -sf ~/.fresh/source/squizlabs/PHP_CodeSniffer/scripts/phpcs ~/bin/phpcs
 #ln -sf ~/.fresh/source/squizlabs/PHP_CodeSniffer/scripts/phpcbf ~/bin/phpcbf
 
+# Scripting
+fresh erichs/composure composure.sh
+ln -sf ~/.dotfiles/local/composure ~/.local/
+ln -sf ~/.dotfiles/scripts ~/
+
 fresh_after_build() {
 #chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcs
 #chmod +x $HOME/.fresh/build/src/PHP_CodeSniffer/scripts/phpcbf
@@ -113,18 +114,4 @@ chmod +x $HOME/.fresh/build/.zprezto/modules/fu/external/fu
 #register new coding standards with phpcs (set path where phpcs can find the standards)
 #~/bin/phpcs --config-set installed_paths ~/.fresh/build/src/PHP_CodeSniffer/CodeSniffer/Standards
 
-#cd ~/.fresh/source/rosenstrauch/prezto/ && git checkout production && git pull
 }
-
-
-# VIMRC
-fresh-options --file=~/.vimrc --marker='"'
-  fresh vim/\*
-
-fresh-options
-
-#load plugins via pathogen managed by fresh
-fresh tpope/vim-pathogen autoload/pathogen.vim --file=~/.vim/autoload/pathogen.vim
-#get drupal vimrc as plugin
-fresh http://git.drupal.org/project/vimrc.git . --file=~/.drush/vimrc/ --ref=7.x-1.x
-#ln -sf ~/.drush/vimrc/bundle/vim-plugin-for-drupal ~/.vim/bundle/vim-plugin-for-drupal

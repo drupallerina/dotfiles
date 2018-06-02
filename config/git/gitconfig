@@ -17,7 +17,7 @@ default = matching
 [merge]
 log = true
 conflictstyle = diff3
-tool = meld
+tool = atom
 
 [rerere]
 enabled = 1
@@ -32,7 +32,3 @@ release = release/
 hotfix = hotfix/
 support = support/
 #versiontag =
-
-
-# [git-achievements]
-# achievement.upload = "true"
