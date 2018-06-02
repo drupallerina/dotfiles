@@ -93,8 +93,6 @@ fresh twe4ked/dotfiles shell/functions/pubkey.sh
 
 #cheat
 #fresh chrisallenlane/cheat . --file=src/cheat/
-# emacs and rvm
-fresh senny/rvm.el rvm.el --file=~/.emacs.d/rvm/rvm.el
 
 
 # pareview

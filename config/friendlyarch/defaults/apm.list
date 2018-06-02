@@ -1,5 +1,5 @@
 # XXX https://atom.io/packages/
-#generate with:
+# generate with:
 # apm list --installed --bare | grep '^[^@]\+' -o > my_atom_packages.txt
 # install with
 # apm install --packages-file my_atom_packages.txt

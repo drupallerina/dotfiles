@@ -11,12 +11,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-# add fresh build to path for ralias
-#export FPATH=~/.fresh/build:$FPATH
-#add ruby gems to PATH
-export PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
-#add rvm to PATH
-export PATH="$PATH:/usr/local/rvm/bin"
 #add composer to path
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 #add some more directories to PATH
