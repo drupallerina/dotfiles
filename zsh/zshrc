@@ -21,5 +21,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.fresh/build/shell.sh" ]]; then
   source ~/.fresh/build/shell.sh
 fi
 
+#source nvm
+export NVM_DIR=~/.nvm
+[ -s "/usr/share/nvm/nvm.sh" ] && . "/usr/share/nvm/nvm.sh"
+
 #search and replace
 autoload -U zmv
