@@ -38,7 +38,7 @@ fresh config/friendlyarch --file=~/.friendlyarch/
 
 ## Prezto zsh config
 ## :get our own prezto setup
-fresh rosenstrauch/prezto . --file=.zprezto/ --ref=6c818153c8ef7
+fresh rosenstrauch/prezto . --file=zprezto/ --ref=6c818153c8ef7
 
 ## Prezto Submodules
 ## :instead of relying on git submodules load external components using fresh
@@ -52,22 +52,22 @@ fresh zsh-users/zsh-history-substring-search . --file=.zprezto/modules/history-s
 
 fresh zsh-users/zsh-syntax-highlighting . --file=.zprezto/modules/syntax-highlighting/external/
 
-fresh rosenstrauch/alias-tips . --file=.zprezto/modules/alias-tips/external/
-fresh Tarrasch/zsh-bd . --file=.zprezto/modules/bd/external/
+fresh rosenstrauch/alias-tips . --file=zprezto/modules/alias-tips/external/
+fresh Tarrasch/zsh-bd . --file=zprezto/modules/bd/external/
 
 ## Prezto themes
-fresh sindresorhus/pure  async.zsh --file=.zprezto/modules/prompt/functions/async
+fresh sindresorhus/pure  async.zsh --file=zprezto/modules/prompt/functions/async
 
-fresh el1t/statusline prezto/prompt_statusline_setup --file=.zprezto/modules/prompt/functions/prompt_statusline_setup
+fresh el1t/statusline prezto/prompt_statusline_setup --file=zprezto/modules/prompt/functions/prompt_statusline_setup
 
-fresh sindresorhus/pure pure.zsh --file=.zprezto/modules/prompt/functions/prompt_pure_setup
+fresh sindresorhus/pure pure.zsh --file=zprezto/modules/prompt/functions/prompt_pure_setup
 
-fresh davidjrice/prezto_powerline prompt_powerline_setup --file=.zprezto/modules/prompt/functions/prompt_powerline_setup
+fresh davidjrice/prezto_powerline prompt_powerline_setup --file=zprezto/modules/prompt/functions/prompt_powerline_setup
 
-fresh chauncey-garrett/zsh-prompt-garrett prompt_garrett_setup --file=.zprezto/modules/prompt/functions/prompt_garrett_setup
+fresh chauncey-garrett/zsh-prompt-garrett prompt_garrett_setup --file=zprezto/modules/prompt/functions/prompt_garrett_setup
 
 # now get the completed prezto setup
-ln -sf ~/.fresh/build/.zprezto/ ~/.zprezto
+ln -sf ~/.fresh/build/zprezto ~/.zprezto
 
 
 # Config
