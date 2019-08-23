@@ -98,7 +98,7 @@ fresh lucasdemarchi/codespell bin/codespell --bin
 
 
 # Scripting
-fresh erichs/composure composure.sh
+fresh discipolo/composure composure.sh --ref=555274541d
 ln -sf ~/.dotfiles/local/composure ~/.local/
 ln -sf ~/.dotfiles/scripts ~/
 
@@ -110,4 +110,3 @@ fresh_after_build() {
   #$HOME/.fresh/build/vendor/PHP_CodeSniffer/bin/phpcs --config-set installed_paths ~/.fresh/build/vendor/PHP_CodeSniffer/code_sniffer/Standards
 
 }
-
