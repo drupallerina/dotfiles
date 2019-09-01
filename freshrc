@@ -102,6 +102,9 @@ fresh discipolo/composure composure.sh --ref=555274541d
 ln -sf ~/.dotfiles/local/composure ~/.local/
 ln -sf ~/.dotfiles/scripts ~/
 
+# keep a managed pam_environment file in which we can define environment variables
+fresh pam_environment --file
+
 fresh_after_build() {
 
   chmod +x $HOME/.fresh/build/vendor/PHP_CodeSniffer/bin/phpcs

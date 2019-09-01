@@ -1,0 +1,6 @@
+LANG             DEFAULT=en_US.UTF-8
+LC_ALL           DEFAULT=${LANG}
+
+XDG_CONFIG_HOME         DEFAULT=@{HOME}/.config
+
+GPODDER_DOWNLOAD_DIR    DEFAULT=@{HOME}/placemarks/gpodder_downloads/
