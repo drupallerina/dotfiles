@@ -23,7 +23,7 @@ fresh-options --bin
   fresh freshshell/fresh bin/fresh
   fresh clvv/fasd fasd
   fresh alicraigmile/show-wip show-wip
-  fresh docksal/docksal bin/fin --ref=v1.10.1
+  fresh docksal/docksal bin/fin --ref=v1.13.1
   fresh simonwhitaker/gibo gibo
 fresh-options
 
