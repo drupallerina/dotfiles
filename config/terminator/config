@@ -1,6 +1,16 @@
 [global_config]
 [keybindings]
   new_tab = <Primary>t
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+    scrollback_infinite = True
+    login_shell = True
+  [[Webdev]]
+    background_type = transparent
+    scrollback_infinite = True
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#1e90ff:#cd00cd:#00cdcd:#e5e5e5:#4c4c4c:#ff0000:#00ff00:#ffff00:#4682b4:#ff00ff:#00ffff:#ffffff"
+    use_theme_colors = True
 [layouts]
   [[default]]
     [[[child1]]]
@@ -10,13 +20,3 @@
       parent = ""
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    cursor_color = "#aaaaaa"
-    login_shell = True
-    scrollback_infinite = True
-  [[Webdev]]
-    background_type = transparent
-    palette = "#000000:#cd0000:#00cd00:#cdcd00:#1e90ff:#cd00cd:#00cdcd:#e5e5e5:#4c4c4c:#ff0000:#00ff00:#ffff00:#4682b4:#ff00ff:#00ffff:#ffffff"
-    scrollback_infinite = True
-    use_theme_colors = True
